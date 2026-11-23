@@ -1,0 +1,77 @@
+{
+ "text": "מה הפונט הזה?",
+ "verdict": "certain",
+ "library": 1288,
+ "rows": [
+  {
+   "family": "Gisha",
+   "style": "Bold",
+   "file": "gishabd.ttf",
+   "score": 93.8
+  },
+  {
+   "family": "Tahoma",
+   "style": "Bold",
+   "file": "tahomabd.ttf",
+   "score": 82.5
+  },
+  {
+   "family": "Noto Sans Hebrew",
+   "style": "ExtraBold",
+   "file": "NotoSansHebrew-VariableFont_wdth,wght.ttf",
+   "score": 79.7
+  },
+  {
+   "family": "Simple CLM",
+   "style": "Bold",
+   "file": "SimpleCLM-Bold.ttf",
+   "score": 76.5
+  }
+ ],
+ "names": [
+  "Gadugi",
+  "Keter YG",
+  "Verdana",
+  "Trebuchet MS",
+  "Courier New",
+  "David CLM",
+  "Calibri",
+  "Candara",
+  "Assistant",
+  "Aharoni CLM",
+  "Frank Ruehl CLM",
+  "Miriam Mono CLM",
+  "Amatic SC",
+  "Segoe UI",
+  "David",
+  "Comix No2 CLM",
+  "Bahnschrift",
+  "Cambria",
+  "Dorian CLM",
+  "Microsoft Sans Serif",
+  "Bellefair",
+  "Yehuda CLM",
+  "Constantia",
+  "Miriam",
+  "Ellinia CLM",
+  "Corbel",
+  "Drugulin CLM",
+  "Arial",
+  "Miriam CLM",
+  "Hadasim CLM",
+  "Shofar",
+  "Rod",
+  "Narkisim",
+  "Georgia",
+  "Nachlieli CLM",
+  "Caladings CLM",
+  "Heebo",
+  "Aharoni",
+  "Stam Ashkenaz CLM",
+  "Levenim MT",
+  "FrankRuehl",
+  "Frank Ruhl Libre",
+  "Times New Roman",
+  "Ebrima"
+ ]
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="no-js" data-store="soon">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מדיניות פרטיות · גופנומטר</title>
+<meta name="description" content="גופנומטר לא אוסף עליכם מידע. הזיהוי קורה במחשב שלכם, והצילומים לא נשלחים לשום מקום.">
+<link rel="canonical" href="https://fontometer.github.io/privacy.html">
+<meta name="theme-color" content="#F2F2EF">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/FrankRuhlLibre-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+  document.documentElement.classList.remove("no-js");
+  try { if (localStorage.getItem("fontometer.theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="gauge" viewBox="0 0 28 28">
+    <path d="M3 19.5A11 11 0 0 1 25 19.5"/>
+    <path d="M6.9 15.4L4.47 14M9.9 12.4L8.5 9.97M14 11.3V8.5M18.1 12.4L19.5 9.97"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="גופנומטר, לעמוד הבית">
+      <svg class="gauge" id="barGauge" viewBox="0 0 28 28" aria-hidden="true"><use href="#gauge"/><g class="needle"><path d="M14 19.5L21.8 14.05"/><circle cx="14" cy="19.5" r="1.9"/></g></svg>
+      <span>גופנומטר</span>
+    </a>
+    <nav class="bar-tools" aria-label="ניווט">
+      <a class="lib-btn" href="./#how">איך זה עובד</a>
+      <a class="lib-btn" href="./#faq">שאלות</a>
+      <a class="lib-btn" href="privacy.html" aria-current="page">פרטיות</a>
+      <button class="icon-btn theme-btn" id="theme" type="button" title="מצב כהה" aria-label="מצב כהה" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path class="half" d="M12 4.5a7.5 7.5 0 0 1 0 15z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <article class="sheet">
+      <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+      <p class="kicker">גופנומטר</p>
+      <h1>מדיניות <span class="hl" data-swipe>פרטיות</span></h1>
+      <p class="updated">עודכנה ב-23 בנובמבר 2026</p>
+
+      <p class="short">בקצרה: <b>גופנומטר לא אוסף עליכם שום מידע.</b> הזיהוי קורה במחשב שלכם, הצילומים לא נשלחים לשום מקום,
+        ואין בתוכנה חשבון, פרסומות או מעקב.</p>
+
+      <h2>מה קורה במחשב שלכם</h2>
+      <p>כל מה שגופנומטר עושה, הוא עושה במחשב שלכם:</p>
+      <ul>
+        <li><b>הצילומים והטקסט שאתם מקלידים</b> מעובדים בזיכרון של התוכנה לצורך הזיהוי בלבד. הם לא נשמרים בקובץ ולא נשלחים לשום מקום.</li>
+        <li><b>הלוח (Clipboard)</b> נקרא רק כשאתם מדביקים לתוכנה תמונה בעצמכם.</li>
+        <li><b>רשימת הפונטים שלכם</b> נסרקת כדי לבנות אינדקס שמאיץ את החיפוש. האינדקס נשמר בתיקיית הנתונים של התוכנה במחשב שלכם.</li>
+        <li><b>ההגדרות</b> (מצב כהה, צלילים ותיקיות פונטים שהוספתם) נשמרות באותה תיקייה.</li>
+        <li><b>יומן תקלות</b> נכתב באותה תיקייה, כדי שאם משהו ישתבש תוכלו לשלוח אותו אליי. הוא עשוי לכלול נתיבים של קבצים
+          במחשב שלכם. הוא לא נשלח לשום מקום אלא אם תצרפו אותו בעצמכם להודעה.</li>
+      </ul>
+      <p>אפשר למחוק את התיקייה הזו בכל רגע. התוכנה תבנה את האינדקס מחדש, וההגדרות יחזרו לברירת המחדל.</p>
+
+      <h2>מתי התוכנה מתחברת לרשת</h2>
+      <p>רק כשתבקשו ממנה לחפש בפונטים החופשיים בעברית של Google Fonts. אז היא מורידה את רשימת הפונטים ואת קובצי הפונטים
+        מהשרתים של Google (<code>fonts.google.com</code>, <code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>)
+        ושומרת אותם במחשב שלכם. בבקשות האלה לא נשלחים צילום, טקסט או פרט מזהה, אבל כמו בכל חיבור לאינטרנט, השרתים של
+        Google רואים את כתובת ה-IP שלכם. על כך חלה <a class="link" href="https://policies.google.com/privacy?hl=iw" rel="noopener">מדיניות הפרטיות של Google</a>.</p>
+      <p>קישורים בתוכנה, כמו דף של פונט ב-Google Fonts או החשבון שלי ב-X, נפתחים בדפדפן שלכם, ושם חלה המדיניות של האתר שנפתח.</p>
+
+      <h2>Microsoft Store</h2>
+      <p>ההורדה, ההתקנה והעדכונים של גופנומטר עוברים דרך Microsoft Store, ועליהם חלה
+        <a class="link" href="https://privacy.microsoft.com/he-il/privacystatement" rel="noopener">הצהרת הפרטיות של Microsoft</a>.
+        Microsoft מעבירה למפתחים נתונים מצרפיים בלבד, כמו מספר ההורדות, הדירוגים ודוחות קריסה. מהם אי אפשר לדעת מי אתם.</p>
+
+      <h2>כשאתם כותבים לי</h2>
+      <p>אם תשלחו לי מייל או הודעה, אשתמש בכתובת ובתוכן רק כדי לענות לכם ולשפר את התוכנה. לא אעביר אותם לאף אחד.
+        צילומים שתשלחו כדי לדווח על שגיאה ישמשו רק לבדיקת השגיאה, ואמחק אותם אם תבקשו.</p>
+
+      <h2>האתר הזה</h2>
+      <p>באתר אין עוגיות, אין כלי סטטיסטיקה ואין פרסומות. הבחירה במצב כהה או בהיר נשמרת רק בדפדפן שלכם.
+        הגופנים והתמונות נטענים מהאתר עצמו, בלי שירותים חיצוניים. שירות האחסון של האתר עשוי לשמור, כמו כל שרת אינטרנט,
+        יומן גישה טכני (כמו כתובת IP ושעת הביקור) לצורכי אבטחה ותפעול.</p>
+
+      <h2>ילדים</h2>
+      <p>גופנומטר לא אוסף מידע מאף משתמש, ובכלל זה מילדים.</p>
+
+      <h2>שינויים במדיניות</h2>
+      <p>אם התוכנה תשתנה כך שתשפיע על הפרטיות, הדף הזה יתעדכן לפני כן, והתאריך בראשו ישתנה בהתאם.</p>
+
+      <h2>שאלות</h2>
+      <p>על כל שאלה בנושא אפשר לכתוב לי: <a class="link mail" href="#contact" data-show>hacker4960 בג'ימייל</a>.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-main">
+      <a class="brand" href="./"><svg class="gauge" viewBox="0 0 28 28" aria-hidden="true"><use href="#gauge"/><g class="needle"><path d="M14 19.5L21.8 14.05"/><circle cx="14" cy="19.5" r="1.9"/></g></svg><span>גופנומטר</span></a>
+      <p class="foot-contact">הערות, צילום של שגיאה, או סתם תודה:<br>
+        <a class="link mail" href="#contact" data-show>hacker4960 בג'ימייל</a> · <a class="link" href="https://x.com/IshayBeit" dir="ltr" rel="noopener">@IshayBeit</a></p>
+    </div>
+    <p class="fine">© 2026 ישי בית הלחמי · <a href="privacy.html">מדיניות פרטיות</a> · גרסת בטא</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

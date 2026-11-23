@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="no-js" data-store="soon">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>גופנומטר · מה הפונט הזה? זיהוי פונט מצילום מסך</title>
+<meta name="description" content="גופנומטר מזהה פונט מצילום מסך, מתוך הפונטים שכבר מותקנים אצלכם ב-Windows. עברית קודם כול, וגם אותיות לטיניות. הצילומים לא יוצאים מהמחשב.">
+<meta name="theme-color" content="#F2F2EF">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://fontometer.github.io/">
+<!-- link previews (WhatsApp, X, Facebook): these need full addresses -->
+<meta property="og:url" content="https://fontometer.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="גופנומטר">
+<meta property="og:title" content="גופנומטר · מה הפונט הזה?">
+<meta property="og:description" content="מזהה פונט מצילום מסך, מתוך הפונטים שכבר יש לכם. עברית קודם כול.">
+<meta property="og:image" content="https://fontometer.github.io/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/FrankRuhlLibre-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Assistant-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+  // before the first paint: scripts are on, and the theme the visitor chose last time (light at first)
+  document.documentElement.classList.remove("no-js");
+  try { if (localStorage.getItem("fontometer.theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "גופנומטר", "alternateName": "Fontometer",
+ "operatingSystem": "Windows 10, Windows 11", "applicationCategory": "DesignApplication", "inLanguage": "he",
+ "description": "זיהוי פונט מצילום מסך, מתוך הפונטים שמותקנים במחשב. עברית קודם כול.",
+ "author": {"@type": "Person", "name": "ישי בית הלחמי"}}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <filter id="stampfx" x="-10%" y="-20%" width="120%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" result="rough"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.5" numOctaves="1" seed="2" result="grain"/>
+    <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -9 6.3" result="holes"/>
+    <feComposite in="rough" in2="holes" operator="in"/>
+  </filter>
+  <symbol id="gauge" viewBox="0 0 28 28">
+    <path d="M3 19.5A11 11 0 0 1 25 19.5"/>
+    <path d="M6.9 15.4L4.47 14M9.9 12.4L8.5 9.97M14 11.3V8.5M18.1 12.4L19.5 9.97"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="גופנומטר, לראש העמוד">
+      <svg class="gauge" id="barGauge" viewBox="0 0 28 28" aria-hidden="true"><use href="#gauge"/><g class="needle"><path d="M14 19.5L21.8 14.05"/><circle cx="14" cy="19.5" r="1.9"/></g></svg>
+      <span>גופנומטר</span>
+    </a>
+    <nav class="bar-tools" aria-label="ניווט">
+      <a class="lib-btn" href="#how">איך זה עובד</a>
+      <a class="lib-btn" href="#faq">שאלות</a>
+      <a class="lib-btn" href="privacy.html">פרטיות</a>
+      <button class="icon-btn theme-btn" id="theme" type="button" title="מצב כהה" aria-label="מצב כהה" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path class="half" d="M12 4.5a7.5 7.5 0 0 1 0 15z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- the program's opening screen, as the opening of the site -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="sheet">
+        <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+        <p class="kicker">ל-Windows · גרסת בטא</p>
+        <h1>מה <span class="hl" data-swipe>הפונט</span> הזה?</h1>
+        <p class="lead">מדביקים צילום מסך, וגופנומטר מוצא את הפונט הכי קרוב <b>מתוך הפונטים שכבר מותקנים אצלכם</b>.
+          עברית קודם כול, תוך שניות, ובלי לגלול פונט־פונט.</p>
+        <div class="cta">
+          <a class="btn primary big store-live" href="https://apps.microsoft.com/detail/9P6WHW5M25Q8">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></svg>להורדה מ-Microsoft Store</a>
+          <span class="btn big soon store-soon">בקרוב ב-Microsoft Store</span>
+          <p class="cta-note">
+            <span class="store-live">ל-Windows 10 ו-11</span>
+            <span class="store-soon">רוצים לנסות את הבטא כבר עכשיו? <a class="link mail" href="#contact">כתבו לי</a></span>
+          </p>
+        </div>
+        <p class="tip">
+          <span class="keys loop" aria-hidden="true"><kbd>Ctrl</kbd><kbd>V</kbd></span>
+          <span>זה כל מה שצריך לזכור. אין הגדרות, אין חשבון, אין העלאה לשום מקום.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- the program itself, with a real result -->
+  <section class="part" id="demo" aria-labelledby="demoTitle">
+    <div class="wrap">
+      <header class="part-head">
+        <p class="kicker">הדגמה</p>
+        <h2 id="demoTitle">ככה זה נראה</h2>
+        <p>צילום מסך אחד, ותוצאה אמיתית שגופנומטר החזיר מתוך ספרייה של <b class="lib-count">1,288</b> פונטים.
+          אחר כך תורכם: גררו את הקו בהשוואה, או בחרו מועמד אחר.</p>
+      </header>
+
+      <div class="sheet app pasted" id="demoApp">
+        <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+        <div class="app-bar" aria-hidden="true">
+          <span class="app-brand"><svg class="gauge" id="appGauge" viewBox="0 0 28 28"><use href="#gauge"/><g class="needle"><path d="M14 19.5L21.8 14.05"/><circle cx="14" cy="19.5" r="1.9"/></g></svg>גופנומטר</span>
+          <span class="app-lib"><span class="lib-count">1,288</span> פונטים בספרייה</span>
+        </div>
+
+        <div class="app-stage">
+          <div class="app-source">
+            <div class="shot">
+              <div class="shot-img">
+                <img src="img/demo/source.png" width="783" height="128" alt="צילום מסך של השורה: מה הפונט הזה?">
+                <div class="scan"></div>
+              </div>
+              <div class="shot-empty" aria-hidden="true">
+                <span class="keys"><kbd data-k="ctrl">Ctrl</kbd><kbd data-k="v">V</kbd></span>
+                <span>מדביקים צילום מסך</span>
+              </div>
+            </div>
+            <div class="ask">
+              <label>מה כתוב שם?</label>
+              <div class="typed" id="demoTyped">מה הפונט הזה?</div>
+            </div>
+            <p class="app-note" id="demoNote">גם בלי להקליד הוא קורא את האותיות בעצמו. עם הקלדה הוא יודע בדיוק איזו אות היא איזו.</p>
+          </div>
+
+          <div class="app-results">
+            <div class="res certain" id="demoRes">
+              <p class="kicker sure" id="demoKicker">זיהוי ודאי</p>
+              <div class="res-main">
+                <div class="res-name">
+                  <h3 id="demoName">Gisha</h3>
+                  <p class="meta"><span id="demoStyle">Bold</span><span class="dot">·</span><span id="demoFile" dir="ltr">gishabd.ttf</span></p>
+                </div>
+                <div class="score">
+                  <div class="stamp" aria-hidden="true">בול!</div>
+                  <div class="score-num"><span class="num" id="demoScore">93.8</span><span class="pct">%</span></div>
+                  <div class="score-cap">התאמה</div>
+                </div>
+              </div>
+              <div class="progress" aria-hidden="true">
+                <div class="track"><i id="demoTrack"></i></div>
+                <p class="stage-text" id="demoStage"></p>
+              </div>
+              <div class="meter" id="demoMeter" style="--v:.938"><i></i><b><span>ודאי מכאן</span></b></div>
+            </div>
+
+            <section class="compare" id="demoCompare" aria-label="השוואה">
+              <header>
+                <h4 class="sub">מקור מול חיקוי</h4>
+                <div class="seg" id="demoSeg">
+                  <button type="button" class="on" data-mode="wipe">החלקה</button>
+                  <button type="button" data-mode="diff">הפרשים</button>
+                </div>
+              </header>
+              <div class="viewer" id="demoViewer" data-mode="wipe" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"
+                   aria-label="השוואה בין הצילום לחיקוי. גררו, או השתמשו בחצים">
+                <img class="v-orig" src="img/demo/source.png" alt="">
+                <img class="v-font" id="demoFont" src="img/demo/font-1.png" alt="">
+                <img class="v-diff" id="demoDiff" src="img/demo/diff-1.png" alt="">
+                <div class="handle"><span></span></div>
+                <span class="tag tag-orig">מקור</span><span class="tag tag-font">חיקוי</span>
+              </div>
+              <p class="legend">
+                <span class="wipe-only">מימין הצילום, משמאל אותו טקסט בפונט שנבחר. גררו את הקו.</span>
+                <span class="diff-only"><i class="sw k"></i>חופף <i class="sw m"></i>רק בצילום <i class="sw c"></i>רק בפונט</span>
+              </p>
+            </section>
+
+            <section class="others" aria-label="המועמדים">
+              <header><h4 class="sub">הקרובים ביותר</h4></header>
+              <ol class="list" id="demoList">
+                <li class="row" data-i="1" style="--i:0;--v:.938" aria-selected="true" tabindex="0"><span class="rank">1</span><span class="row-sample"><img src="img/demo/row-1.png" alt=""></span><span class="row-name"><b><span>Gisha</span></b><small>Bold</small></span><span class="row-score">93.8%</span></li>
+                <li class="row" data-i="2" style="--i:1;--v:.825" aria-selected="false" tabindex="0"><span class="rank">2</span><span class="row-sample"><img src="img/demo/row-2.png" alt=""></span><span class="row-name"><b><span>Tahoma</span></b><small>Bold</small></span><span class="row-score">82.5%</span></li>
+                <li class="row" data-i="3" style="--i:2;--v:.797" aria-selected="false" tabindex="0"><span class="rank">3</span><span class="row-sample"><img src="img/demo/row-3.png" alt=""></span><span class="row-name"><b><span>Noto Sans Hebrew</span></b><small>ExtraBold</small></span><span class="row-score">79.7%</span></li>
+                <li class="row" data-i="4" style="--i:3;--v:.765" aria-selected="false" tabindex="0"><span class="rank">4</span><span class="row-sample"><img src="img/demo/row-4.png" alt=""></span><span class="row-name"><b><span>Simple CLM</span></b><small>Bold</small></span><span class="row-score">76.5%</span></li>
+              </ol>
+            </section>
+          </div>
+        </div>
+
+        <div class="app-foot">
+          <span>בצילום: השורה "מה הפונט הזה?" בפונט Gisha Bold, שמגיע עם Windows.</span>
+          <button class="quiet" id="demoAgain" type="button">שוב מההתחלה</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="part" id="how" aria-labelledby="howTitle">
+    <div class="wrap">
+      <header class="part-head">
+        <p class="kicker">איך זה עובד</p>
+        <h2 id="howTitle">שלושה צעדים, <span class="hl" data-swipe>אפס גלילה</span></h2>
+      </header>
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <h3>מדביקים</h3>
+          <p>צילום מסך, תמונה או קובץ. מספיקה שורה אחת.
+            אין צילום מוכן? <span class="keys sm" aria-label="Win, Shift ו־S"><kbd>Win</kbd><kbd>Shift</kbd><kbd>S</kbd></span> מצלם אזור מהמסך ישר ללוח.</p>
+          <div class="step-art"><span class="keys loop" aria-hidden="true"><kbd>Ctrl</kbd><kbd>V</kbd></span></div>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <h3>מקלידים</h3>
+          <p>מה כתוב בשורה. לא חובה, אבל זה הופך ניחוש לזיהוי: כל אות נמדדת מול אותה אות בכל פונט.</p>
+          <div class="step-art"><div class="mini-field" aria-hidden="true">מה הפונט הזה?</div></div>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <h3>מקבלים</h3>
+          <p>את הפונט, או את הכי קרובים אליו, עם אחוז התאמה והשוואה צמודה לצילום.</p>
+          <div class="step-art"><span class="mini-stamp" aria-hidden="true">בול!</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="part" id="why" aria-labelledby="whyTitle">
+    <div class="wrap">
+      <header class="part-head">
+        <p class="kicker">מה מיוחד בו</p>
+        <h2 id="whyTitle">נבנה בשביל מי שעובד <span class="hl" data-swipe>בעברית</span></h2>
+      </header>
+      <dl class="points">
+        <div>
+          <dt>מחפש בפונטים שכבר יש לכם</dt>
+          <dd>הוא לא שולח אתכם לקנות פונט. הוא עובר על הספרייה שמותקנת אצלכם, ומוצא פונט שאפשר לעבוד איתו מיד.
+            אפשר להוסיף לחיפוש גם תיקיות של פונטים שלא מותקנים.</dd>
+        </div>
+        <div>
+          <dt>אומר כשהוא לא בטוח</dt>
+          <dd>החותמת "בול!" מופיעה רק כשיש התאמה ברורה. בכל מקרה אחר תקבלו את המועמדים הקרובים והשוואה צמודה,
+            וההחלטה הסופית נשארת של העין שלכם.</dd>
+        </div>
+        <div>
+          <dt>עברית קודם כול</dt>
+          <dd>נבנה סביב האותיות העבריות, יודע להתעלם מניקוד, ומזהה גם אותיות לטיניות.</dd>
+        </div>
+        <div>
+          <dt>הצילומים לא יוצאים מהמחשב</dt>
+          <dd>כל הזיהוי קורה אצלכם. אין חשבון, אין העלאה לשרת ואין מעקב.</dd>
+        </div>
+        <div>
+          <dt>מסתדר עם צילומים מבולגנים</dt>
+          <dd>כמה שורות, רקע עמוס או טקסט מוטה: הוא מוצא את השורות, מיישר, ומבודד את האותיות מהרקע.
+            לחיצה על שורה בוחרת אותה.</dd>
+        </div>
+        <div>
+          <dt>וכשהפונט לא אצלכם</dt>
+          <dd>הוא יגיד שאין התאמה ודאית, יציע את הקרובים בסגנון, ויוכל לחפש גם בפונטים החופשיים בעברית של Google Fonts.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="part" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <header class="part-head">
+        <p class="kicker">שאלות</p>
+        <h2 id="faqTitle">מה שבדרך כלל שואלים</h2>
+      </header>
+      <div class="faq">
+        <details>
+          <summary><span>על אילו מחשבים זה עובד?</span></summary>
+          <div class="answer"><p>Windows 10 ו-Windows 11, במחשבים של 64 ביט. אין גרסה למק או לטלפון, לפחות בינתיים.</p></div>
+        </details>
+        <details>
+          <summary><span>הוא מזהה רק פונטים שמותקנים אצלי?</span></summary>
+          <div class="answer">
+            <p>קודם כול כן, וזה בכוונה: ככה תמצאו פונט שכבר יש לכם ואפשר לעבוד איתו מיד. אפשר להוסיף לחיפוש גם תיקיות של פונטים שלא מותקנים.</p>
+            <p>אם הפונט מהצילום לא נמצא אצלכם, גופנומטר יגיד שאין התאמה ודאית, יציע את הקרובים אליו בסגנון,
+              ויוכל לחפש גם בפונטים החופשיים בעברית של Google Fonts.</p>
+          </div>
+        </details>
+        <details>
+          <summary><span>הצילומים שלי נשלחים לאנשהו?</span></summary>
+          <div class="answer"><p>לא. כל הזיהוי קורה במחשב שלכם, בלי חשבון ובלי שרת. התוכנה מתחברת לרשת רק אם תבקשו לחפש בפונטים
+            החופשיים, וגם אז היא רק מורידה פונטים. הפרטים המלאים ב<a class="link" href="privacy.html">מדיניות הפרטיות</a>.</p></div>
+        </details>
+        <details>
+          <summary><span>למה כדאי להקליד מה כתוב בתמונה?</span></summary>
+          <div class="answer"><p>כי אז הוא יודע בדיוק איזו אות היא איזו, ומשווה כל אות לאותה אות בכל פונט. בלי הקלדה הוא קורא את האותיות
+            בעצמו, וזה עובד, אבל ההקלדה הופכת ניחוש לזיהוי.</p></div>
+        </details>
+        <details>
+          <summary><span>זה עובד גם על אנגלית? ומה עם ניקוד?</span></summary>
+          <div class="answer"><p>כן. גופנומטר נבנה סביב העברית, אבל מזהה גם אותיות לטיניות. ניקוד הוא מזהה ומתעלם ממנו מעצמו,
+            ואפשר לבקש ממנו להשוות גם אותו.</p></div>
+        </details>
+        <details>
+          <summary><span>מצאתי את הפונט. מותר לי להשתמש בו?</span></summary>
+          <div class="answer"><p>לא בהכרח. הזיהוי לא אומר כלום על הרישיון של הפונט. לפני שימוש, ובמיוחד בעבודה מסחרית,
+            בדקו את תנאי הרישיון שלו.</p></div>
+        </details>
+        <details>
+          <summary><span>הוא טעה. מה עושים?</span></summary>
+          <div class="answer"><p>קודם כול נסו לסמן שורה אחת ולהקליד מה כתוב בה. אם עדיין לא, שלחו לי את הצילום:
+            <a class="link mail" href="#contact" data-show>hacker4960 בג'ימייל</a>. זו גרסת בטא, וכל צילום כזה עוזר לשפר אותו.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="part end" aria-labelledby="endTitle">
+    <div class="wrap">
+      <div class="sheet">
+        <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+        <h2 id="endTitle">נמאס לגלול <span class="hl" data-swipe>פונט־פונט</span>?</h2>
+        <div class="cta">
+          <a class="btn primary big store-live" href="https://apps.microsoft.com/detail/9P6WHW5M25Q8">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></svg>להורדה מ-Microsoft Store</a>
+          <span class="btn big soon store-soon">בקרוב ב-Microsoft Store</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-main">
+      <a class="brand" href="./"><svg class="gauge" viewBox="0 0 28 28" aria-hidden="true"><use href="#gauge"/><g class="needle"><path d="M14 19.5L21.8 14.05"/><circle cx="14" cy="19.5" r="1.9"/></g></svg><span>גופנומטר</span></a>
+      <p class="foot-contact">הערות, צילום של שגיאה, או סתם תודה:<br>
+        <a class="link mail" href="#contact" data-show>hacker4960 בג'ימייל</a> · <a class="link" href="https://x.com/IshayBeit" dir="ltr" rel="noopener">@IshayBeit</a></p>
+    </div>
+    <p class="fine">© 2026 ישי בית הלחמי · <a href="privacy.html">מדיניות פרטיות</a> · גרסת בטא</p>
+    <p class="fine">Windows ו-Microsoft Store הם סימנים מסחריים של Microsoft, ו-Google Fonts הוא שירות של Google.
+      שמות הפונטים בהדגמה שייכים לבעליהם. גופנומטר אינו קשור לאף אחד מהם.</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

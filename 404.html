@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="no-js" data-store="soon">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>לא נמצא · גופנומטר</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2F2EF">
+<!-- this page is served for any missing address, at any depth, so its links start from the root -->
+<link rel="icon" href="/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="/style.css">
+<script>
+  document.documentElement.classList.remove("no-js");
+  try { if (localStorage.getItem("fontometer.theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+</script>
+</head>
+<body>
+<main class="lost">
+  <div class="wrap">
+    <div class="sheet">
+      <i class="mark tl"></i><i class="mark tr"></i><i class="mark bl"></i><i class="mark br"></i>
+      <p class="kicker">404</p>
+      <h1>אין <span class="hl" data-swipe>התאמה</span>.</h1>
+      <p class="lead">הדף הזה לא נמצא. אפילו גופנומטר לא מצא לו מועמד קרוב.</p>
+      <a class="btn primary big" href="/">לעמוד הבית</a>
+    </div>
+  </div>
+</main>
+<script>
+  // the stroke runs here too, without the rest of the site's script
+  document.querySelector(".hl").classList.add("on");
+</script>
+</body>
+</html>
