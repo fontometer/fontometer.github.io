@@ -39,7 +39,6 @@
 
   /* ---------- the address: put together here, so it is not lying around in the page for collectors ---------- */
   const addr = ["hacker4960", "gmail.com"].join("@");
-  const fine = matchMedia("(pointer: fine)").matches;     // a mouse: copy it; a phone: open the mail app
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); return true; } catch (e) {
       const t = Object.assign(document.createElement("textarea"), { value: text });
@@ -47,19 +46,22 @@
       const ok = document.execCommand("copy"); t.remove(); return ok;
     }
   }
+  // No mailto: it opens the mail program set up in Windows, and most people read mail in the
+  // browser and have none. A click copies the address instead; the link keeps pointing at the
+  // footer, which shows it, for anyone without this script.
+  const show = (a) => { a.textContent = addr; a.dir = "ltr"; };
   $$("a.mail").forEach((a) => {
-    a.href = "mailto:" + addr;
-    if (a.hasAttribute("data-show")) { a.textContent = addr; a.dir = "ltr"; }
-    if (!fine) return;
+    if (a.hasAttribute("data-show")) show(a);
     a.title = "לחיצה מעתיקה את הכתובת";
     a.addEventListener("click", async (e) => {
       e.preventDefault();
-      if (a.classList.contains("copied") || !(await copy(addr))) return;
-      const was = a.textContent, dir = a.dir;
+      if (a.classList.contains("copied")) return;
+      if (!(await copy(addr))) return show(a);          // could not copy: at least show it
       a.dir = "rtl";
       a.textContent = "הועתקה! הדביקו במייל";
       a.classList.add("copied");
-      setTimeout(() => { a.textContent = was; a.dir = dir; a.classList.remove("copied"); }, 1800);
+      // then the address itself, so it is clear what was copied ("כתבו לי" becomes the address)
+      setTimeout(() => { show(a); a.classList.remove("copied"); }, 1800);
     });
   });
 
